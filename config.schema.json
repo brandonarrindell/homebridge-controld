@@ -1,0 +1,38 @@
+{
+  "pluginAlias": "ControlDPlatform",
+  "pluginType": "platform",
+  "singular": true,
+  "strictValidation": false,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "required": true,
+        "default": "Control D"
+      },
+      "apiToken": {
+        "title": "API Token",
+        "type": "string",
+        "required": true,
+        "description": "API token from Control D. You need a token with profiles:read and profiles:write permissions. Get it from https://controld.com/dashboard → Settings → API."
+      },
+      "refreshInterval": {
+        "title": "Refresh Interval",
+        "type": "number",
+        "minimum": 5,
+        "maximum": 3600,
+        "default": 60,
+        "description": "Interval in seconds to refresh profile status"
+      },
+      "debug": {
+        "title": "Debug Logging",
+        "type": "boolean",
+        "default": false,
+        "description": "Enable debug logging"
+      }
+    }
+  },
+  "footerDisplay": "This plugin creates HomeKit switches to toggle DNS filtering for each of your Control D profiles. Each profile will appear as a switch that can be turned on/off to enable or disable DNS filtering for that profile."
+}
