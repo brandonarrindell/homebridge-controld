@@ -2,7 +2,7 @@
   "name": "homebridge-controld",
   "displayName": "Homebridge Control D",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": false,
   "description": "Homebridge plugin for controlling Control D DNS profiles",
   "author": {
